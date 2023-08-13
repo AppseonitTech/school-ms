@@ -5,9 +5,7 @@ export default function FourOhFour() {
     <div className='centerDiv'>
       <h1>404 - Page Not Found</h1>
       <Link href="/">
-        <a>
-          Go back home
-        </a>
+        Go back home
       </Link>
     </div>
   </>

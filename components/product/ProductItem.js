@@ -18,10 +18,8 @@ const ProductItem = ({ product, handleCheck }) => {
     const userLink = () => {
         return (
             <>
-                <Link href={`/product/${product._id}`}>
-                    <a className="btn btn-primary"
-                        style={{ marginRight: '5px', flex: 1 }}>View</a>
-                </Link>
+                <Link href={`/product/${product._id}`} className="btn btn-primary"
+                        style={{ marginRight: '5px', flex: 1 }}>View</Link>
                 <button className="btn btn-success"
                     style={{ marginLeft: '5px', flex: 1 }}
                     disabled={product.inStock === 0 ? true : false}
@@ -35,10 +33,8 @@ const ProductItem = ({ product, handleCheck }) => {
     const adminLink = () => {
         return (
             <>
-                <Link href={`/create/${product._id}`}>
-                    <a className="btn btn-primary"
-                        style={{ marginRight: '5px', flex: 1 }}>Edit</a>
-                </Link>
+                <Link href={`/create/${product._id}`} className="btn btn-primary"
+                        style={{ marginRight: '5px', flex: 1 }}>Edit</Link>
                 <button className="btn btn-danger"
                     style={{ marginLeft: '5px', flex: 1 }}
                     data-toggle="modal" data-target="#confirmModal"
@@ -67,7 +63,7 @@ const ProductItem = ({ product, handleCheck }) => {
                     onChange={() => handleCheck(product._id)} />
             }
             <Link href={`/product/${product._id}`}>
-                <img className="card-img-top" src={product.images[0].url} alt={product.title} />
+                <img className="card-img-top" src={product.url} alt={product.title} />
             </Link>
             <div className="card-body">
                 <h6 className="card-title text-capitalize" title={product.title}>

@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { DataContext } from '../store/GlobalState'
-import CartItem from '../components/CartItem'
 import { getData, postData } from '../utils/fetchData'
 import { isLoggedInPopup } from '../components/SignIn/SignInCardFunctionalComponent'
 import Address from '../components/Cart/Address'
@@ -105,11 +104,11 @@ const Cart = () => {
       <div className="col-md-6 text-secondary table-responsive my-3 colHeight">
         <table className="table my-3">
           <tbody>
-            {
+            {/* {
               cart.map(item => (
-                <CartItem key={item._id} item={item} dispatch={dispatch} cart={cart} isAdmin={auth && auth.user && auth.user.role === 'admin'} />
+                // <CartItem key={item._id} item={item} dispatch={dispatch} cart={cart} isAdmin={auth && auth.user && auth.user.role === 'admin'} />
               ))
-            }
+            } */}
           </tbody>
         </table>
       </div>
@@ -119,9 +118,7 @@ const Cart = () => {
         <Address />
         <h5 style={{ color: 'black' }}>Total: <span>₹{total}</span></h5>
 
-        <Link href={auth.user ? '#!' : '/signin'}>
-          <a className="btn btn-primary my-2 cartPayBtn" onClick={handlePayment}>Proceed To Pay</a>
-        </Link>
+        <Link href={auth.user ? '#!' : '/signin'} className="btn btn-primary my-2 cartPayBtn" onClick={handlePayment}>Proceed To Pay</Link>
 
       </div>
     </div>
