@@ -13,9 +13,7 @@ const OrderItems = (props) => {
                         <img src={item.images[0].url}
                             style={{ width: '50px', height: '50px', objectFit: 'cover' }} />
                         <div className="flex-fill font-weight-normal px-3 m-0">
-                            <Link href={`/product/${item._id}`}>
-                                <a style={{ wordWrap: 'break-word' }}>{item.title}</a>
-                            </Link>
+                            <Link href={`/product/${item._id}`} style={{ wordWrap: 'break-word' }}>{item.title}</Link>
                             <div className="flex-fill m-0">
                                 <label>
                                     ₹{item.totalPrice} x {item.quantity}

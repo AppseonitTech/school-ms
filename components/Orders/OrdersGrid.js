@@ -12,9 +12,7 @@ export default function OrdersGrid(props) {
             props.orders && props.orders.map(order => (
                 <tr key={order._id} className={classNameOnHover(order)}>
                     <td className="p-2">
-                        <Link href={`/order?id=${order._id}`} style={{ cursor: 'pointer' }}>
-                            <a>{order._id}</a>
-                        </Link>
+                        <Link href={`/order?id=${order._id}`} style={{ cursor: 'pointer' }}>{order._id}</Link>
                     </td>
                     <td className="p-2">
                         {order.placed ?
