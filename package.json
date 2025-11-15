@@ -12,7 +12,7 @@
     "bcrypt": "^5.0.0",
     "bootstrap": "*",
     "c3": "^0.7.20",
-    "cloudinary": "^1.30.0",
+    "cloudinary": "^2.7.0",
     "d3": "^7.6.1",
     "date-fns": "^2.28.0",
     "eslint-config-next": "^13.4.13",
